@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.youxin</groupId>
+    <artifactId>springcloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springcloud-api</module>
+        <module>springcloud-provider-dept-8001</module>
+        <module>springcloud-consumer-dept-80</module>
+        <module>springcloud-eureka-server-7001</module>
+        <module>springcloud-eureka-server-7002</module>
+        <module>springcloud-eureka-server-7003</module>
+        <module>springcloud-provider-dept-8002</module>
+        <module>springcloud-provider-dept-8003</module>
+        <module>springcloud-consumer-dept-feign</module>
+        <module>springcloud-provider-dept-hystrix-8001</module>
+        <module>springcloud-consumer-dept-dashboard-9001</module>
+        <module>springcloud-zuul-gateway-10086</module>
+        <module>springcloud-config-server-3366</module>
+        <module>springcloud-config-client-8202</module>
+        <module>springcloud-provider-dept-config</module>
+    </modules>
+
+    <!-- 打包方式 -->
+    <packaging>pom</packaging>
+
+    <properties>
+        <junit.version>4.13.2</junit.version>
+        <lombok.version>1.18.20</lombok.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- springcloud依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR12</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- springboot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 数据库 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.26</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.21</version>
+            </dependency>
+
+            <!-- springboot启动器 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>2.5.6</version>
+            </dependency>
+
+            <!-- log4j -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>1.2.6</version>
+            </dependency>
+
+            <!-- junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

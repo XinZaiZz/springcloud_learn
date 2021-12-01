@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SpringCloud-DB-01@localhost" uuid="cd17d805-e348-4824-9d79-5a2ec164acf4">
+      <database-info product="MySQL" version="8.0.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MYSQL" exact-version="8.0.26">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:springcloud-db-01</introspection-schemas>
+    </data-source>
+    <data-source name="@localhost" uuid="b4f9b37d-c201-431f-aabc-bc3e546f4f85">
+      <database-info product="MySQL" version="8.0.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MYSQL" exact-version="8.0.26">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:springcloud-db-02,springcloud-db-03</introspection-schemas>
+    </data-source>
+  </component>
+</project>

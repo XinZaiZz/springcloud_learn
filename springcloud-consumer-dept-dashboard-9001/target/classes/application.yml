@@ -1,0 +1,12 @@
+server:
+  port: 9001
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost
+
+eureka:
+  client:
+    # 关闭注册自己
+    register-with-eureka: false
+    fetch-registry: false

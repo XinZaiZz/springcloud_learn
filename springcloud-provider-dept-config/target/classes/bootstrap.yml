@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: springcloud-provider-config
+      label: master
+      uri: http://localhost:3366
+      profile: test

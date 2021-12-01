@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+  # eureka配置
+eureka:
+  client:
+    register-with-eureka: false #表示不向eureka注册中心发现自己
+    service-url:
+      # 向集群中获取服务
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+
+# 在客户端中开启降级
+feign:
+  hystrix:
+    enabled: true
