@@ -1,0 +1,34 @@
+server:
+  port: 10086
+
+
+spring:
+  application:
+    name: springcloud-zuul
+
+#eureka注册中心配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: sprincloud-zuul-8001 # 修改eureka默认描述信息
+    prefer-ip-address: true #自动获取本机url
+
+info:
+  app.auther: youxin
+  company.address: com.youxin.com
+
+# zuul配置
+zuul:
+  # 路由相关配置
+  # 原来访问路由 eg:http://localhost:10086/springcloud-provider-dept/dept/get/1
+  # zuul路由配置后访问路由 eg:http://localhost:10086/youxin/mydept/dept/get/1
+  routes:
+    youxin.serviceId: springcloud-provider-dept
+    youxin.path: /mydept/**
+  # 不能再使用原来这个路径访问了，*： 忽略,隐藏全部的服务名称~
+#  ignored-services: "*"
+#  ignored-services: springcloud-provider-dept
+  # 设置公共的前缀
+  prefix: /youxin
